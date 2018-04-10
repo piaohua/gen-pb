@@ -1,0 +1,6 @@
+{
+	1000:{type:"room",		sendType:"pb.CLogin",		revType:"pb.SLogin",		},
+	1002:{type:"room",		sendType:"pb.CRegist",		revType:"pb.SRegist",		},
+	1004:{type:"room",		sendType:"pb.CWxLogin",		revType:"pb.SWxLogin",		},
+	1006:{type:"room",		sendType:"",		revType:"pb.SLoginOut",		}
+}
