@@ -22,16 +22,16 @@
 -spec p(Msg) -> {ok, Bin} | {error, undefined} when
       Bin :: binary(),
       Msg :: any().
-p(#'SLogin'{} = Msg)) ->
+p(#'SLogin'{} = Msg) ->
 	Bin = login_pb:encode_msg(Msg),
 	{ok, <<1000:32, Bin/binary>>};
-p(#'SRegist'{} = Msg)) ->
+p(#'SRegist'{} = Msg) ->
 	Bin = login_pb:encode_msg(Msg),
 	{ok, <<1002:32, Bin/binary>>};
-p(#'SWxLogin'{} = Msg)) ->
+p(#'SWxLogin'{} = Msg) ->
 	Bin = login_pb:encode_msg(Msg),
 	{ok, <<1004:32, Bin/binary>>};
-p(#'SLoginOut'{} = Msg)) ->
+p(#'SLoginOut'{} = Msg) ->
 	Bin = login_pb:encode_msg(Msg),
 	{ok, <<1006:32, Bin/binary>>};
 p(_Msg) ->

@@ -122,7 +122,7 @@ func body_erl_packet() (str string) {
 	for f, m := range protosPacket {
 		for _, v := range m {
 			//str += fmt.Sprintf("p(Msg) when is_record(Msg, '%s') ->\n", v.name)
-			str += fmt.Sprintf("p(#'%s'{} = Msg)) ->\n", v.name)
+			str += fmt.Sprintf("p(#'%s'{} = Msg) ->\n", v.name)
 			str += fmt.Sprintf("\tBin = %s_pb:encode_msg(Msg),\n", f)
 			str += fmt.Sprintf("\t{ok, <<%d:32, Bin/binary>>};\n", v.code)
 		}
